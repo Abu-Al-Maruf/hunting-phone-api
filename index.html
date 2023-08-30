@@ -11,9 +11,20 @@
 <body>
    
 
-    <section class="container mx-auto">
+  <!-- search here section  -->
+  <section class="container mx-auto rounded-xl mt-12 flex items-center justify-center gap-1 bg-purple-500 p-6">
+    <input id="search-field" type="text" placeholder="Search here..." 
+    class="input border rounded-l-lg input-success w-full max-w-xs bg-gray-100" />
+    <button id="search-btn" onclick="handleClick()" class="btn btn-active btn-neutral">Search</button>
+  </section>
+ <!-- search result section  -->
+    <section class="container mx-auto mt-8">
         <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           
+        </div>
+
+        <div id="show-all" class="text-center hidden my-5">
+          <button class="btn btn-neutral">Show All</button>
         </div>
     </section>
     
