@@ -12,20 +12,44 @@
    
 
   <!-- search here section  -->
-  <section class="container mx-auto rounded-xl mt-12 flex items-center justify-center gap-1 bg-purple-500 p-6">
+  <section class="container mx-auto rounded-xl mt-12 flex items-center justify-center gap-1 bg-fuchsia-800 p-6">
     <input id="search-field" type="text" placeholder="Search here..." 
     class="input border rounded-l-lg input-success w-full max-w-xs bg-gray-100" />
     <button id="search-btn" onclick="handleClick()" class="btn btn-active btn-neutral">Search</button>
   </section>
  <!-- search result section  -->
     <section class="container mx-auto mt-8">
+      <!-- loading  -->
+      <section id="loading-spinner" class="hidden text-center my-20">
+        <span class="loading loading-bars loading-md"></span>
+      </section>
+
         <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           
         </div>
 
         <div id="show-all" class="text-center hidden my-5">
-          <button class="btn btn-neutral">Show All</button>
+          <button onclick="handleShowAll()" class="btn btn-neutral">Show All</button>
         </div>
+
+
+        <!-- show modal when click details  -->
+        <!-- Open the modal using ID.showModal() method -->
+      
+      <dialog id="show_details_modal" class="modal">
+        <form method="dialog" class="modal-box">
+          <h3 id="phone-details-name" class="font-bold text-lg" class="text-3xl text-gray-400"></h3>
+          
+         <div id="phone-details-container" class="flex flex-col gap-3">
+
+         </div>
+         
+          <div class="modal-action">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </div>
+        </form>
+      </dialog>
     </section>
     
 
